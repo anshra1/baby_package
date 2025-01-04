@@ -10,3 +10,4 @@ export 'src/enum/status_type.dart';
 export 'src/enum/storage_codes.dart';
 export 'src/enum/storage_status.dart';
 export 'src/enum/storage_type.dart';
+export 'src/enum/test.dart';
