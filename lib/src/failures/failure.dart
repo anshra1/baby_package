@@ -1,6 +1,6 @@
 // Package imports:
-import 'package:debug_app_web/src/cores/enum/enum/error_catogory.dart';
-import 'package:debug_app_web/src/cores/enum/enum/error_severity.dart';
+
+import 'package:baby_package/enum.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class Failure extends Equatable {
