@@ -1,5 +1,7 @@
 // Package imports:
-import 'package:baby_package/my_system.dart';
+import 'package:baby_package/src/enum/error_catogory.dart';
+import 'package:baby_package/src/enum/error_codes.dart';
+import 'package:baby_package/src/enum/error_severity.dart';
 import 'package:equatable/equatable.dart';
 
 

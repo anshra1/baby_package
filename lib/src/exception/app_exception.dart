@@ -1,8 +1,8 @@
 // ignore_for_file: use_super_parameters
 
-import 'package:baby_package/my_system.dart';
+import 'package:baby_package/src/enum/error_catogory.dart';
+import 'package:baby_package/src/enum/error_severity.dart';
 import 'package:equatable/equatable.dart';
-
 
 abstract class AppException extends Equatable implements Exception {
   const AppException({
@@ -20,7 +20,7 @@ abstract class AppException extends Equatable implements Exception {
 
   final dynamic dartError;
   final dynamic debugCode;
-  final ErrorCode errorCode;
+  final dynamic errorCode;
   final String? showUImessage;
   final String? debugDetails;
   final ErrorSeverity severity;
@@ -83,7 +83,7 @@ $dartStackTraceFormattedStack
 
 class ServerException extends AppException {
   const ServerException({
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     required dynamic debugCode,
     required String methodName,
     required dynamic dartError,
@@ -109,7 +109,7 @@ class ServerException extends AppException {
 
 class CacheException extends AppException {
   const CacheException({
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     required String debugCode,
     required String showUImessage,
     required String methodName,
@@ -153,7 +153,7 @@ class StorageException extends AppException {
 
 class NetworkException extends AppException {
   const NetworkException({
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     required String debugCode,
     required String showUImessage,
     required String methodName,
@@ -179,7 +179,7 @@ class NetworkException extends AppException {
 class NetworkTimeOutException extends AppException {
   const NetworkTimeOutException({
     required dynamic dartError,
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     required String debugCode,
     required String showUImessage,
     required String methodName,
@@ -206,7 +206,7 @@ class ValidationException extends AppException {
   const ValidationException({
     required dynamic debugCode,
     required String methodName,
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     String? showUImessage,
     ErrorCategory errorCategory = ErrorCategory.unknown,
     String? debugDetails,
@@ -232,7 +232,7 @@ class PermissionDeniedException extends AppException {
   const PermissionDeniedException({
     required dynamic debugCode,
     required String methodName,
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     String? showUImessage,
     ErrorCategory errorCategory = ErrorCategory.permissionDenied,
     String? debugDetails,
@@ -257,7 +257,7 @@ class PermissionDeniedException extends AppException {
 class UnknownException extends AppException {
   const UnknownException({
     required dynamic dartError,
-    required ErrorCode errorCode,
+    required dynamic errorCode,
     required dynamic debugCode,
     required String methodName,
     String? showUImessage,
