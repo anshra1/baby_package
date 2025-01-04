@@ -1,9 +1,7 @@
 // Package imports:
-import 'package:baby_package/src/enum/error_catogory.dart';
-import 'package:baby_package/src/enum/error_codes.dart';
-import 'package:baby_package/src/enum/error_severity.dart';
-import 'package:equatable/equatable.dart';
 
+import 'package:baby_package/enum.dart';
+import 'package:equatable/equatable.dart';
 
 abstract class Failure extends Equatable {
   const Failure({
@@ -15,7 +13,7 @@ abstract class Failure extends Equatable {
   });
 
   final String message;
-  final ErrorCode code;
+  final dynamic code;
   final ErrorCategory category;
   final ErrorSeverity severity;
   final bool? isRecoverable;
@@ -68,6 +66,7 @@ class NetworkFailure extends Failure {
   const NetworkFailure({
     required super.message,
     required super.code,
+    required Object error,
     super.category,
     super.isRecoverable,
     super.severity,
@@ -107,5 +106,25 @@ class UnknownFailure extends Failure {
     required super.category,
     required super.isRecoverable,
     required super.severity,
+  });
+}
+
+class PermissionDeniedFailure extends Failure {
+  const PermissionDeniedFailure({
+    required super.message,
+    required super.code,
+    required super.category,
+    required super.isRecoverable,
+    required super.severity,
+  });
+}
+
+class PlatformFailure extends Failure {
+  const PlatformFailure({
+    required super.message,
+    required super.code,
+    super.category,
+    super.isRecoverable,
+    super.severity,
   });
 }
