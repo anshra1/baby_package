@@ -1,3 +1,3 @@
 // Auto-generated barrel file for failures
 
-export 'failure.dart';
+export 'src/failures/failure.dart';

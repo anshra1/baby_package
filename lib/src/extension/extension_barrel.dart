@@ -7,7 +7,6 @@ export 'date.dart';
 export 'double.dart';
 export 'edge_insets_extesion.dart';
 export 'error_codes.dart';
-
 export 'list.dart';
 export 'num.dart';
 export 'object.dart';
