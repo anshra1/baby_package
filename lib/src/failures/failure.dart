@@ -1,6 +1,6 @@
 // Package imports:
 
-import 'package:baby_package/enum.dart';
+import 'package:baby_package/package_name.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class Failure extends Equatable {

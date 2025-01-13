@@ -1,0 +1,24 @@
+# Platform specific
+windows/
+web/
+android/
+ios/
+linux/
+macos/
+
+# Development files
+.dart_tool/
+.idea/
+.vscode/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+
+# Testing and coverage
+coverage/
+test/coverage/
+
+# Temporary files
+*.log
+.DS_Store
